@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { projects } from '@/lib/data';
@@ -51,7 +51,7 @@ function ProjectCard({ project, tall = false, lang = 'pt' }: { project: (typeof 
           </p>
         </div>
         <div className="shrink-0 w-10 h-10 bg-[var(--orange)] flex items-center justify-center text-white font-bold text-lg ml-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-          ↗
+          ↗︎
         </div>
       </div>
     </a>
