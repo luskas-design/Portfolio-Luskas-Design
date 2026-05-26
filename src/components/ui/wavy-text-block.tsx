@@ -9,8 +9,6 @@ import {
   useScroll,
   useSpring,
 } from 'framer-motion';
-
-type ScrollOffset = Parameters<typeof useScroll>[0]['offset'];
 import React from 'react';
 
 interface WavyTextsConfig {
@@ -100,7 +98,7 @@ export function WavyBlockItem({
 export function WavyBlock({
   offset = ['start end', 'end start'],
   ...props
-}: React.ComponentPropsWithRef<'div'> & { offset?: ScrollOffset }) {
+}: React.ComponentPropsWithRef<'div'> & { offset?: string[] }) {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const { current } = containerRef;
 
@@ -109,9 +107,10 @@ export function WavyBlock({
     return Math.max(...Array.from(current.children).map((c) => String(c.textContent).length));
   }, [current?.children]);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset,
+    offset: offset as any,
   });
 
   return (
