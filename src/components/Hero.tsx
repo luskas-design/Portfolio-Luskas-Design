@@ -1,17 +1,17 @@
 'use client';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { type Lang, translations } from '@/lib/translations';
 
-const item = {
+const item: Variants = {
   hidden: { opacity: 0, filter: 'blur(12px)', y: 12 },
   show: {
     opacity: 1,
     filter: 'blur(0px)',
     y: 0,
-    transition: { type: 'spring' as const, bounce: 0.3, duration: 1.5 },
+    transition: { type: 'spring', bounce: 0.3, duration: 1.5 },
   },
 };
-const container = {
+const container: Variants = {
   hidden: {},
   show: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
 };
