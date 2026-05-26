@@ -8,6 +8,7 @@ import {
   useReducedMotion,
   useScroll,
   useSpring,
+  type ScrollOffset,
 } from 'framer-motion';
 import React from 'react';
 
@@ -98,7 +99,7 @@ export function WavyBlockItem({
 export function WavyBlock({
   offset = ['start end', 'end start'],
   ...props
-}: React.ComponentPropsWithRef<'div'> & { offset?: [string, string] }) {
+}: React.ComponentPropsWithRef<'div'> & { offset?: ScrollOffset }) {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const { current } = containerRef;
 
