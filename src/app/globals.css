@@ -20,6 +20,9 @@
 
 html { scroll-behavior: smooth; }
 
+/* Prevent ↗ ▶ and similar characters from rendering as emoji on mobile */
+* { font-variant-emoji: text; }
+
 @keyframes marquee {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
