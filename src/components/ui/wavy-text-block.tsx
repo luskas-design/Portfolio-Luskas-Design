@@ -8,8 +8,9 @@ import {
   useReducedMotion,
   useScroll,
   useSpring,
-  type ScrollOffset,
 } from 'framer-motion';
+
+type ScrollOffset = Parameters<typeof useScroll>[0]['offset'];
 import React from 'react';
 
 interface WavyTextsConfig {
