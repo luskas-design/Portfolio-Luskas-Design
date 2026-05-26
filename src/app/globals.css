@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: var(--font-syne);
+  --font-body: var(--font-dm-sans);
+  --color-orange: #FF4D00;
+}
+
+:root {
+  --orange: #FF4D00;
+  --orange-dim: rgba(255, 77, 0, 0.125);
+  --black: #0A0A0A;
+  --white: #F8F6F2;
+  --gray-100: #F0EDE8;
+  --gray-200: #DDD9D2;
+  --gray-400: #9A9590;
+  --gray-700: #3D3A36;
+  color-scheme: light;
+}
+
+html { scroll-behavior: smooth; }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes brands-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+body {
+  background: var(--white);
+  color: var(--black);
+  overflow-x: hidden;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body { cursor: none; }
+}
+
+::selection {
+  background: var(--orange);
+  color: var(--white);
+}
