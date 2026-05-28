@@ -17,12 +17,12 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Lucas Santos — Product Designer',
+  title: 'luskas.design',
   description:
-    '5+ anos criando experiências visuais. Em transição para Product Design — designer gráfico, publicidade e IA.',
+    'Designer visual com experiência em direção de arte, campanhas digitais e pós-produção. Focado em UI e Product Design.',
   openGraph: {
-    title: 'Lucas Santos — Product Designer',
-    description: 'Portfólio de Lucas Santos.',
+    title: 'luskas.design',
+    description: 'Portfólio de Lucas Santos — UI & Product Designer.',
     type: 'website',
   },
 };
