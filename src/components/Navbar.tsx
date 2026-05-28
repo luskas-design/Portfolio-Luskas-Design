@@ -46,7 +46,7 @@ export default function Navbar({ lang = 'pt' }: { lang?: Lang }) {
           </a>
         </li>
         <li>
-          <a href="#contact" className="font-body text-[0.72rem] tracking-[0.1em] uppercase font-medium no-underline bg-[var(--orange)] text-[var(--white)] px-5 py-2.5 hover:bg-[var(--black)] transition-colors duration-200 whitespace-nowrap">
+          <a href={t.contactHref} target="_blank" rel="noopener noreferrer" className="font-body text-[0.72rem] tracking-[0.1em] uppercase font-medium no-underline bg-[var(--orange)] text-[var(--white)] px-5 py-2.5 hover:bg-[var(--black)] transition-colors duration-200 whitespace-nowrap">
             {t.contact}
           </a>
         </li>
@@ -62,11 +62,14 @@ export default function Navbar({ lang = 'pt' }: { lang?: Lang }) {
       {/* Mobile menu */}
       {open && (
         <div className="absolute top-full inset-x-0 bg-[var(--white)] border-t border-[var(--gray-200)] px-8 py-6 flex flex-col gap-5 lg:hidden">
-          {[...navLinks, { label: t.mobileContact, href: '#contact' }].map(l => (
+          {[...navLinks].map(l => (
             <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="font-body text-sm font-medium text-[var(--black)] hover:text-[var(--orange)] transition-colors no-underline">
               {l.label}
             </a>
           ))}
+          <a href={t.contactHref} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="font-body text-sm font-medium text-[var(--black)] hover:text-[var(--orange)] transition-colors no-underline">
+            {t.mobileContact}
+          </a>
           <a href={t.langHref} className="flex items-center gap-1.5 font-body text-sm font-medium text-[var(--orange)] no-underline">
             {t.langToggle}
             {/* eslint-disable-next-line @next/next/no-img-element */}

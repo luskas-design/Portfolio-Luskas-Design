@@ -65,11 +65,11 @@ export default function Hero({ lang = 'pt' }: { lang?: Lang }) {
             luskas<span className="text-[var(--orange)]">.</span>design
           </div>
           <div className="flex flex-col sm:flex-row gap-3">
-            <a href="#work"
+            <a href={t.cta1Href}
               className="font-body text-[0.75rem] font-medium tracking-[0.1em] uppercase bg-[var(--orange)] text-[var(--white)] px-7 py-3.5 no-underline hover:bg-white hover:text-[var(--black)] transition-colors duration-200 text-center whitespace-nowrap">
               {t.cta1}
             </a>
-            <a href="#contact"
+            <a href={t.cta2Href} target="_blank" rel="noopener noreferrer"
               className="font-body text-[0.75rem] font-medium tracking-[0.1em] uppercase border border-white/50 text-[var(--white)] px-7 py-3.5 no-underline hover:border-white transition-colors duration-200 text-center whitespace-nowrap">
               {t.cta2}
             </a>

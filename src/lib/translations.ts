@@ -1,4 +1,4 @@
-﻿export type Lang = 'pt' | 'en';
+export type Lang = 'pt' | 'en';
 
 export const translations = {
   pt: {
@@ -7,6 +7,7 @@ export const translations = {
       about: 'SOBRE MIM',
       testimonials: 'RECOMENDAÇÕES',
       contact: 'ENTRAR EM CONTATO ▶︎',
+      contactHref: 'https://wa.me/5511984221317',
       mobileContact: 'CONTATO',
       langToggle: 'EN-US',
       langFlag: '/images/flag-us.svg',
@@ -19,7 +20,9 @@ export const translations = {
       sub: 'Há mais de 6 anos criando interfaces,\nmarcas e experiências com direção criativa.',
       body: 'Designer visual com experiência em direção de arte, campanhas digitais e pós-produção. Atualmente focado em UI e Product Design, unindo repertório visual com pensamento estratégico e experiência digital.',
       cta1: 'VER PROJETOS ↗︎',
+      cta1Href: '#work',
       cta2: 'FALAR COMIGO ↗︎',
+      cta2Href: 'https://linkedin.com/in/luskasdesign/',
     },
     marquee: [
       'UI Design', 'Product Design', 'Pós-Produção', 'Direção de Arte',
@@ -58,6 +61,8 @@ export const translations = {
       navTitle: 'Navegue',
       socialTitle: 'Social',
       copyright: '© 2026 Luskas.design — Todos os direitos reservados.',
+      curriculumHref: '/Curriculo_2026-Lucas_Santos.pdf',
+      curriculumLabel: 'Currículo.',
       navLinks: [
         { label: 'Home.', href: '#top' },
         { label: 'Cases.', href: '#work' },
@@ -73,6 +78,7 @@ export const translations = {
       about: 'ABOUT ME',
       testimonials: 'TESTIMONIALS',
       contact: 'GET IN TOUCH ▶︎',
+      contactHref: 'https://wa.me/5511984221317',
       mobileContact: 'CONTACT',
       langToggle: 'PT-BR',
       langFlag: '/images/flag-br.svg',
@@ -85,7 +91,9 @@ export const translations = {
       sub: 'Over 6 years creating interfaces,\nbrands and experiences with creative direction.',
       body: 'Visual designer with experience in art direction, digital campaigns and post-production. Currently focused on UI and Product Design, combining visual background with strategic thinking and digital experience.',
       cta1: 'VIEW PROJECTS ↗︎',
+      cta1Href: '#work',
       cta2: 'TALK TO ME ↗︎',
+      cta2Href: 'https://linkedin.com/in/luskasdesign/',
     },
     marquee: [
       'UI Design', 'Product Design', 'Post-Production', 'Art Direction',
@@ -124,6 +132,8 @@ export const translations = {
       navTitle: 'Navigate',
       socialTitle: 'Social',
       copyright: '© 2026 Luskas.design — All rights reserved.',
+      curriculumHref: '/Resume_2026-Lucas_Santos.pdf',
+      curriculumLabel: 'Resume.',
       navLinks: [
         { label: 'Home.', href: '/en#top' },
         { label: 'Cases.', href: '/en#work' },

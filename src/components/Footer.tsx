@@ -1,17 +1,19 @@
 import { type Lang, translations } from '@/lib/translations';
 
-const socialLinks = [
+const staticSocialLinks = [
   { label: 'Instagram.', href: 'https://www.instagram.com/luskas.design/' },
   { label: 'Behance.', href: 'https://www.behance.net/luskasdesign' },
   { label: 'LinkedIn.', href: 'https://linkedin.com/in/luskasdesign/' },
-  { label: 'Currículo.', href: '/curriculo.pdf' },
 ];
 
-function FooterLink({ href, label }: { href: string; label: string }) {
+function FooterLink({ href, label, download }: { href: string; label: string; download?: string }) {
   const isExternal = href.startsWith('http');
   const base = label.slice(0, -1);
   return (
-    <a href={href} target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noopener noreferrer' : undefined}
+    <a href={href}
+      target={isExternal ? '_blank' : undefined}
+      rel={isExternal ? 'noopener noreferrer' : undefined}
+      download={download}
       className="block font-display font-bold text-[var(--black)] no-underline hover:text-[var(--orange)] transition-colors duration-200"
       style={{ fontSize: 'clamp(16px, 1.5vw, 22px)' }}>
       {base}<span className="text-[var(--orange)]">.</span>
@@ -62,7 +64,12 @@ export default function Footer({ lang = 'pt' }: { lang?: Lang }) {
           <span className="text-[var(--orange)] text-base block mb-4">✦</span>
           <p className="font-body text-[0.65rem] tracking-[0.15em] uppercase text-[var(--gray-400)] font-semibold mb-4">{t.socialTitle}</p>
           <div className="flex flex-col gap-2">
-            {socialLinks.map(l => <FooterLink key={l.href} href={l.href} label={l.label} />)}
+            {staticSocialLinks.map(l => <FooterLink key={l.href} href={l.href} label={l.label} />)}
+            <FooterLink
+              href={t.curriculumHref}
+              label={t.curriculumLabel}
+              download={t.curriculumHref.split('/').pop()}
+            />
           </div>
         </div>
       </div>
