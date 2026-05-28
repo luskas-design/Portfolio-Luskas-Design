@@ -21,9 +21,9 @@ export default function Hero({ lang = 'pt' }: { lang?: Lang }) {
 
   return (
     <section id="top" className="relative min-h-screen flex flex-col justify-between overflow-hidden" style={{ background: '#1a1208' }}>
-      <div className="absolute inset-0 bg-cover bg-no-repeat bg-[65%_top] md:bg-center" style={{ backgroundImage: 'url(/images/hero.jpg)' }} />
+      <div className="absolute inset-0 bg-cover bg-no-repeat bg-[65%_top] md:bg-[right_top]" style={{ backgroundImage: 'url(/images/hero.jpg)' }} />
       <div className="absolute inset-0 md:hidden" style={{ background: 'linear-gradient(to bottom, rgba(10,8,4,0.05) 0%, rgba(10,8,4,0.55) 55%, rgba(10,8,4,0.92) 100%)' }} />
-      <div className="absolute inset-0 hidden md:block" style={{ background: 'linear-gradient(to right, rgba(10,8,4,0.82) 0%, rgba(10,8,4,0.55) 50%, rgba(10,8,4,0.15) 100%)' }} />
+      <div className="absolute inset-0 hidden md:block" style={{ background: 'linear-gradient(to right, rgba(10,8,4,0.92) 0%, rgba(10,8,4,0.7) 32%, rgba(10,8,4,0.2) 58%, rgba(10,8,4,0) 100%)' }} />
 
       {/* Vertical label */}
       <div className="hidden lg:flex absolute right-12 top-1/2 -translate-y-1/2 z-10 items-center">
