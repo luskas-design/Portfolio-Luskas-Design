@@ -25,8 +25,13 @@ function ProjectCard({ project, tall = false, lang = 'pt' }: { project: (typeof 
       rel={isExternal ? 'noopener noreferrer' : undefined}
       className={`relative flex flex-col justify-end overflow-hidden group no-underline block ${tall ? 'h-[420px] md:h-[664px]' : 'h-[380px] md:h-[600px]'}`}
       style={{ background: '#111' }}>
-      <div className={`absolute inset-0 bg-center transition-transform duration-700 group-hover:scale-[1.03] ${project.imageSize === 'contain' ? 'bg-contain bg-no-repeat' : 'bg-cover'}`}
-        style={{ backgroundImage: project.image ? `url(${project.image})` : 'none', background: project.image ? undefined : '#1a1a1a' }} />
+      <div className="absolute inset-0 bg-no-repeat bg-top transition-transform duration-700 group-hover:scale-[1.03]"
+        style={{
+          backgroundImage: project.image ? `url(${project.image})` : 'none',
+          background: project.image ? undefined : '#1a1a1a',
+          backgroundSize: project.imageSize ?? 'cover',
+          backgroundPosition: project.imageSize ? 'center top' : 'center',
+        }} />
       <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%)' }} />
 
       <div className="absolute top-5 right-5 flex items-center gap-2 z-10">

@@ -10,7 +10,7 @@ export interface Project {
   type: string;
   featured?: boolean;
   image?: string;
-  imageSize?: 'cover' | 'contain';
+  imageSize?: string;
   behanceUrl?: string;  // temporary: redirect to Behance until internal case pages are ready
 }
 
@@ -30,7 +30,7 @@ export const projects: Project[] = [
     description: 'Landing page com foco em conversão',
     descriptionEn: 'Landing page focused on conversion',
     tags: ['UI DESIGN'], year: '2026', type: 'UI Design',
-    image: '/images/projects/bb-hotels.jpg', imageSize: 'contain',
+    image: '/images/projects/bb-hotels.jpg', imageSize: '100% auto',
     behanceUrl: 'https://www.behance.net/gallery/240787675/B-B-HOTELS-Landing-Page-UI-Design-Prototype',
   },
   {
