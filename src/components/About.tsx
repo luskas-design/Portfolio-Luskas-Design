@@ -117,7 +117,7 @@ export default function About({ lang = 'pt' }: { lang?: Lang }) {
       <div className="border-t border-b border-[var(--gray-200)] overflow-hidden py-6 md:py-8" style={{ background: 'var(--white)' }}>
         <div className="flex items-center whitespace-nowrap" style={{ animation: 'brands-scroll 28s linear infinite', width: 'max-content' }}>
           {[...brands, ...brands].map((brand, i) => (
-            <span key={i} className="flex items-center gap-8 md:gap-14 px-8 md:px-14">
+            <span key={i} className="flex items-center gap-3 px-6">
               <span className="flex items-center justify-center select-none pointer-events-none"
                 style={{ width: 'clamp(72px, 8vw, 130px)', height: 'clamp(24px, 2.8vw, 40px)' }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
