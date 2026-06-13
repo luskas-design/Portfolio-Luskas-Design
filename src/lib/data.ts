@@ -15,22 +15,22 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 7, slug: 'dead-by-daylight',
+    title: 'Dead by Daylight',
+    description: 'Projeto de estudo de redesign do site',
+    descriptionEn: 'Website redesign concept study',
+    tags: ['UI DESIGN'], year: '2025', type: 'UI Design', featured: true,
+    image: '/images/projects/dbd.png',
+    behanceUrl: 'https://www.behance.net/gallery/251034467/Dead-by-Daylight-Website-Redesign-Case-Study',
+  },
+  {
     id: 1, slug: 'bb-hotels',
     title: 'B&B HOTELS',
     description: 'Landing page com foco em conversão',
     descriptionEn: 'Landing page focused on conversion',
-    tags: ['UI DESIGN'], year: '2026', type: 'UI Design', featured: true,
+    tags: ['UI DESIGN'], year: '2026', type: 'UI Design',
     image: '/images/projects/bb-hotels.jpg',
     behanceUrl: 'https://www.behance.net/gallery/240787675/B-B-HOTELS-Landing-Page-UI-Design-Prototype',
-  },
-  {
-    id: 2, slug: 'ip-school',
-    title: 'IP School Idiomas',
-    description: 'Site novo com o rebranding da marca',
-    descriptionEn: 'New website with full brand rebranding',
-    tags: ['UI DESIGN'], year: '2026', type: 'UI Design',
-    image: '/images/projects/ip-school.jpg',
-    behanceUrl: 'https://www.behance.net/gallery/212199917/IP-School-New-Website-UI-Design',
   },
   {
     id: 3, slug: 'runboost',
