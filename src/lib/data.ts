@@ -10,6 +10,7 @@ export interface Project {
   type: string;
   featured?: boolean;
   image?: string;
+  imageSize?: 'cover' | 'contain';
   behanceUrl?: string;  // temporary: redirect to Behance until internal case pages are ready
 }
 
@@ -19,7 +20,7 @@ export const projects: Project[] = [
     title: 'Dead by Daylight',
     description: 'Projeto de estudo de redesign do site',
     descriptionEn: 'Website redesign concept study',
-    tags: ['UI DESIGN'], year: '2025', type: 'UI Design', featured: true,
+    tags: ['UI DESIGN'], year: '2026', type: 'UI Design', featured: true,
     image: '/images/projects/dbd.png',
     behanceUrl: 'https://www.behance.net/gallery/251034467/Dead-by-Daylight-Website-Redesign-Case-Study',
   },
@@ -29,7 +30,7 @@ export const projects: Project[] = [
     description: 'Landing page com foco em conversão',
     descriptionEn: 'Landing page focused on conversion',
     tags: ['UI DESIGN'], year: '2026', type: 'UI Design',
-    image: '/images/projects/bb-hotels.jpg',
+    image: '/images/projects/bb-hotels.jpg', imageSize: 'contain',
     behanceUrl: 'https://www.behance.net/gallery/240787675/B-B-HOTELS-Landing-Page-UI-Design-Prototype',
   },
   {
