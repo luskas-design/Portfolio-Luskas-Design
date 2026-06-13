@@ -25,6 +25,13 @@ export const metadata: Metadata = {
     title: 'Luskas.design — Product Designer',
     description: 'Portfólio de Lucas Santos — UI & Product Designer.',
     type: 'website',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Luskas.design — Product Designer' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Luskas.design — Product Designer',
+    description: 'Portfólio de Lucas Santos — UI & Product Designer.',
+    images: ['/og-image.jpg'],
   },
 };
 
