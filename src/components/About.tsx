@@ -113,31 +113,6 @@ export default function About({ lang = 'pt' }: { lang?: Lang }) {
         </div>
       </div>
 
-      {/* ── Brand logos carousel ── */}
-      <div className="border-t border-b border-[var(--gray-200)] overflow-hidden py-6 md:py-8" style={{ background: 'var(--white)' }}>
-        <div className="flex items-center whitespace-nowrap" style={{ animation: 'brands-scroll 28s linear infinite', width: 'max-content' }}>
-          {[...brands, ...brands].map((brand, i) => (
-            <span key={i} className="flex items-center gap-3 px-6">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={brand.logo}
-                alt={brand.name}
-                className="block select-none pointer-events-none"
-                style={{
-                  width: 'clamp(72px, 8vw, 130px)',
-                  height: 'clamp(24px, 2.8vw, 40px)',
-                  objectFit: 'contain',
-                  objectPosition: 'center',
-                  ...(brand.colorize !== false ? { filter: 'brightness(0) invert(1) brightness(0.44) sepia(1) saturate(500%) hue-rotate(340deg)' } : {}),
-                }}
-                draggable={false}
-              />
-              <span className="text-[var(--gray-200)] text-[0.5rem]">◆</span>
-            </span>
-          ))}
-        </div>
-      </div>
-
       {/* ── Skills / Competências ── */}
       <div className="px-8 md:px-16 py-16 md:py-20 border-t border-[var(--gray-200)] relative">
         <div className="flex items-center gap-2 font-body text-[0.72rem] tracking-[0.15em] uppercase text-[var(--orange)] font-semibold mb-6 lg:mb-0 lg:absolute lg:left-16 lg:top-20">
