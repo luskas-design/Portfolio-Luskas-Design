@@ -114,17 +114,17 @@ export default function About({ lang = 'pt' }: { lang?: Lang }) {
       </div>
 
       {/* ── Brand logos carousel ── */}
-      <div className="border-t border-b border-[var(--gray-200)] overflow-hidden py-8" style={{ background: 'var(--white)' }}>
-        <div className="flex items-center whitespace-nowrap" style={{ animation: 'brands-scroll 12s linear infinite' }}>
+      <div className="border-t border-b border-[var(--gray-200)] overflow-hidden py-6 md:py-8" style={{ background: 'var(--white)' }}>
+        <div className="flex items-center whitespace-nowrap" style={{ animation: 'brands-scroll 28s linear infinite', width: 'max-content' }}>
           {[...brands, ...brands].map((brand, i) => (
-            <span key={i} className="flex items-center gap-16 px-16">
+            <span key={i} className="flex items-center gap-8 md:gap-14 px-8 md:px-14">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={brand.logo}
                 alt={brand.name}
                 className="w-auto object-contain select-none pointer-events-none"
                 style={{
-                  height: '80px',
+                  height: 'clamp(32px, 4.5vw, 64px)',
                   ...(brand.colorize !== false ? { filter: 'brightness(0) invert(1) brightness(0.44) sepia(1) saturate(500%) hue-rotate(340deg)' } : {}),
                 }}
                 draggable={false}
