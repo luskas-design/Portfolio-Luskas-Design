@@ -118,17 +118,23 @@ export default function About({ lang = 'pt' }: { lang?: Lang }) {
         <div className="flex items-center whitespace-nowrap" style={{ animation: 'brands-scroll 28s linear infinite', width: 'max-content' }}>
           {[...brands, ...brands].map((brand, i) => (
             <span key={i} className="flex items-center gap-8 md:gap-14 px-8 md:px-14">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={brand.logo}
-                alt={brand.name}
-                className="w-auto object-contain select-none pointer-events-none"
-                style={{
-                  height: 'clamp(32px, 4.5vw, 64px)',
-                  ...(brand.colorize !== false ? { filter: 'brightness(0) invert(1) brightness(0.44) sepia(1) saturate(500%) hue-rotate(340deg)' } : {}),
-                }}
-                draggable={false}
-              />
+              <span className="flex items-center justify-center select-none pointer-events-none"
+                style={{ width: 'clamp(72px, 8vw, 130px)', height: 'clamp(24px, 2.8vw, 40px)' }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={brand.logo}
+                  alt={brand.name}
+                  className="object-contain"
+                  style={{
+                    maxWidth: '100%',
+                    maxHeight: '100%',
+                    width: 'auto',
+                    height: 'auto',
+                    ...(brand.colorize !== false ? { filter: 'brightness(0) invert(1) brightness(0.44) sepia(1) saturate(500%) hue-rotate(340deg)' } : {}),
+                  }}
+                  draggable={false}
+                />
+              </span>
               <span className="text-[var(--gray-200)] text-[0.5rem]">◆</span>
             </span>
           ))}
