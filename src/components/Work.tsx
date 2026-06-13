@@ -63,7 +63,8 @@ export default function Work({ lang = 'pt' }: { lang?: Lang }) {
   const [p0, p1, p2, p3, p4, p5] = projects;
 
   return (
-    <section id="work" className="px-8 md:px-16 py-20 md:py-28 overflow-hidden" style={{ background: 'var(--white)' }}>
+    <section id="work" className="py-20 md:py-28 overflow-hidden" style={{ background: 'var(--white)' }}>
+      <div className="max-w-[1440px] mx-auto px-8 md:px-16">
       <Reveal>
         <div className="mb-12 relative">
           <div aria-hidden="true"
@@ -97,6 +98,7 @@ export default function Work({ lang = 'pt' }: { lang?: Lang }) {
           <Reveal delay={0}>{p4 && <ProjectCard project={p4} lang={lang} />}</Reveal>
           <Reveal delay={0.07}>{p5 && <ProjectCard project={p5} lang={lang} />}</Reveal>
         </div>
+      </div>
       </div>
     </section>
   );
