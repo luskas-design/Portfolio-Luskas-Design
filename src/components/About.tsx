@@ -56,7 +56,7 @@ export default function About({ lang = 'pt' }: { lang?: Lang }) {
           luskas<span className="text-[var(--orange)]">.</span>design
         </h2>
 
-        <div className="flex items-center justify-between px-8 md:px-16 pb-10 font-display font-semibold text-[var(--black)]"
+        <div className="relative z-10 flex items-center justify-between px-8 md:px-16 pb-10 font-display font-semibold text-[var(--black)]"
           style={{ fontSize: 'clamp(14px, 1.8vw, 22px)' }}>
           {t.infoItems.map((item, i) => <span key={i}>{item}</span>)}
         </div>
