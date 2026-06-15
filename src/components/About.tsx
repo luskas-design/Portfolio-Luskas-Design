@@ -52,7 +52,7 @@ export default function About({ lang = 'pt' }: { lang?: Lang }) {
       <div className="relative overflow-hidden border-t border-[var(--gray-200)]" style={{ background: 'var(--white)' }}>
         <h2 aria-hidden="true"
           className="font-display font-bold text-[var(--black)] leading-[0.85] tracking-tight whitespace-nowrap select-none text-center"
-          style={{ fontSize: 'clamp(44px, 14vw, 9999px)', letterSpacing: '-0.03em' }}>
+          style={{ fontSize: 'clamp(44px, 14vw, 9999px)', letterSpacing: '-0.03em', paddingBottom: '0.18em' }}>
           luskas<span className="text-[var(--orange)]">.</span>design
         </h2>
 
